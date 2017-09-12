@@ -1,0 +1,208 @@
+.address {
+  display: flex;
+  width: 100%;
+}
+
+.address1 {
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 20rpx solid gainsboro;
+  justify-content: space-between;
+  right: 20rpx;
+}
+
+.address2 {
+  padding-top: 20rpx;
+  padding-left: 25rpx;
+  display: flex;
+  width: 100%;
+  height: 160rpx;
+  border-bottom: 20rpx solid gainsboro;
+  right: 20rpx;
+}
+
+.add {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 25rpx;
+  font-size: 20;
+  width: 90%;
+  font-weight: 550;
+  color: gray;
+}
+
+.show_address {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.sign {
+  display: inline-flex;
+  align-items: center;
+  float: right;
+  margin-right: 25rpx;
+}
+
+.img_container {
+  display: flex;
+  width: 100%;
+  height: 220rpx;
+  border-bottom: 10rpx solid gainsboro;
+  align-items: center;
+  text-align: center;
+}
+
+.scro_view {
+  width: 67%;
+  height: 100%;
+}
+
+.img {
+  width: 140rpx;
+  height: 160rpx;
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+}
+
+.num_text {
+  margin: 50rpx;
+  font-size: 30rpx;
+  color: gray;
+  
+}
+
+.num {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 30rpx;
+  color: black;
+}
+
+.size {
+  margin: 50rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+
+.pay_information {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 180rpx;
+  border-bottom: 5rpx solid gainsboro;
+  justify-content: center;
+}
+
+.product_price {
+  height: 30rpx;
+  font-size: 30rpx;
+  color: green;
+  margin-right: 25rpx;
+}
+.pay_name{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  right: 25rpx;
+  
+}
+.product_text {
+  margin-left: 25rpx;
+  font-size: 37rpx;
+}
+
+.express_price {
+  font-size: 30rpx;
+  color: green;
+  margin-right: 25rpx;
+}
+
+.express_text {
+  margin-left: 25rpx;
+  font-size: 37rpx;
+}
+
+.pay_price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+}
+
+.pay_express {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  padding-left: 10rpx;
+}
+
+.real_pay {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 10rpx solid gainsboro;
+  height: 100rpx;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.real_pay_word {
+  margin-left: 25rpx;
+  font-size: 38rpx;
+  font-weight: 650;
+}
+
+.real_pay_number {
+  margin-right: 25rpx;
+  color: green;
+  font-weight: 800;
+}
+
+.bottom {
+  border: 1px solid;
+  border-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 130rpx;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+
+.button {
+  background: green;
+  width: 32%;
+  height: 90rpx;
+  position: relative;
+  right: 20rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0;
+  color: white;
+  font-size: 36rpx;
+  line-height: 90rpx;
+  overflow: hidden;
+}
+
+.allpay {
+  text-align: center;
+  width: 65%;
+  color: green;
+  font-weight: 600;
+}
+.receiver{
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    white-space:nowrap; 
+}

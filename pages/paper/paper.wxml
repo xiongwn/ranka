@@ -1,0 +1,6 @@
+<!--pages/paper/paper.wxml-->
+<block wx:for="{{passages}}">
+<view wx:if="{{item.title==name}}" class="con">
+<image src="{{item.imgurl}}" class="img" mode="aspectFit" bindload="EventHandle" style="height:{{height}}px"></image>
+</view>
+</block>

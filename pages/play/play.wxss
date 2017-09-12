@@ -1,0 +1,30 @@
+/* pages/play/play.wxss */
+.play{
+    width:100%;
+    text-align: center;
+}
+video{
+    
+   
+}
+.canvascss{
+    position: absolute;
+    top: 0;
+}
+.icon{
+    display: none;
+}
+#canvas{
+    display: none;
+}
+.bg{
+  
+  height: 20%;
+  position: absolute;
+  bottom:-15%;
+  white-space: nowrap;
+}
+.all{
+ position: relative;
+  width: 100%;
+}

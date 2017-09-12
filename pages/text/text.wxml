@@ -1,0 +1,2 @@
+<!--pages/text/text.wxml-->
+<video src="https://47.93.87.98/vediotest/a.mp4"  autoplay="true" ></video>

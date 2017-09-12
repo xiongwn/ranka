@@ -1,0 +1,49 @@
+/* pages/calculate/calculate.wxss */
+.index0{
+
+    border-bottom: 10rpx solid #44c0c0;
+    color:#44c0c0;
+}
+.index1{
+    border-bottom: 10rpx solid #44c0c0;
+    color: #44c0c0
+}
+@-webkit-keyframes hidden{
+    from{opacity: 1}
+    to{opacity: 0.3}
+}
+
+.sporthidden{
+    animation: hidden 0.5s ;
+    -webkit-animation: hidden 0.5s ;
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    pointer-events: none 
+    
+}
+@keyframes hidden{
+    from{opacity: 1}
+    to{opacity: 0.3}
+}
+.addcontrol{
+    animation: pull 0.5s forwards;
+    -webkit-animation: pull 0.5s forwards;
+}
+@-webkit-keyframes pull{
+    from{bottom: -30%}
+    to{bottom:0}
+}
+.iscancel{
+   
+   
+    display: none
+}
+.img_hidden{
+    display:none;
+}
+view{
+    font-family: 黑体
+}
+.noshowsport{
+    display: none;
+}

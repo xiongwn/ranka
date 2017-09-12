@@ -1,0 +1,110 @@
+.swiper-item
+{
+  background-color: transparent;
+  display: block;
+  width: 100%;
+ height: 200px;
+ align-content: center;
+ align-items: center
+}
+.slide-image
+{
+  height:200px;
+  display: block;
+  align-self: center;
+  width:100%;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.swiper{
+  margin:4px;
+  height: 200px;
+}
+.lesson-name{
+  color: white;
+  position: absolute;
+  bottom:0px;
+  margin-left:5px;
+}
+.item{
+  width:95%;
+  height: 300rpx;
+  margin:20rpx 20rpx ;
+  background-color: #585858;
+  position: relative;
+  display: flex;
+}
+.view-img{
+  
+  width:70%;
+  height:300rpx;
+ 
+  
+}
+.desc{
+  position: absolute;
+top:80rpx;
+left: 15rpx;
+font-size: 25rpx;
+width: auto;
+}
+.contain{
+  width: 100%;
+  height:auto;
+}
+text{
+  color:white;
+  font-family: "Microsoft YaHei";
+  font-size: 80%;
+}
+.last-text{
+  font-size: 25rpx;
+  position: absolute;
+bottom:3px;
+left:15rpx;
+text-shadow: 0rpx 0rpx 10rpx #585858;
+}
+
+.coursename{
+  font-size: 50rpx;
+  font-family: "微软雅黑";
+  position:absolute;
+  top:12rpx;
+  left:15rpx;
+}
+.line{
+  width:100%;
+  height: 1px;
+  background: #585858;
+  opacity: 0.4;
+  margin-right:2px ;
+}
+.category{
+  
+  height: 60rpx;
+  background: transparent;
+  margin:5rpx auto;
+  
+  
+  color: black;
+  display: inline-block;
+  text-align: center;
+
+ 
+}
+.category text{
+  color: black;
+  margin: auto; 
+  vertical-align: middle;
+font-size:35rpx
+}
+.selected text{
+  color: #44c0c0;
+  opacity: 1;
+  
+}
+.selected 
+{
+   border-bottom: 8rpx solid #44c0c0;
+   z-index: 10
+}

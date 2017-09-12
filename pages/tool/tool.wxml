@@ -1,0 +1,9 @@
+<!--pages/tool/tool.wxml-->
+<view style="height:{{window_height}}px;text-align:center;position:relative">
+<!--<view style="height:inherit"></view>-->
+<view style="position:absolute;top:50%;margin-top:-35%;text-align:center;width:100%;">
+<view class="bq" data-type="BMI" bindtap="calculate" style="margin-top:0"><text data-type="BMI">BMI指数检测</text></view>
+<view class="bq" data-type="sport" bindtap="calculate"><text data-type="sport">运动&生活 卡路里消耗计算</text></view>
+<view class="bq" data-type="food" bindtap="calculate"><text data-type="food">食物卡路里计算</text></view>
+</view>
+</view>

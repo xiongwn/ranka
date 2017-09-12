@@ -1,0 +1,4 @@
+/* pages/ranking/ranking.wxss */
+view{
+    font-family: 黑体
+}

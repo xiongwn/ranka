@@ -1,0 +1,10 @@
+/* pages/course/course.wxss */
+text{
+    font-family: "微软雅黑";
+    font-size:28rpx;
+}
+.cal{
+    left:230rpx;
+    bottom:100rpx;
+    font-size: 25rpx;
+}

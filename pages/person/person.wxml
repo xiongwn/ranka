@@ -1,0 +1,53 @@
+<!--pages/person/person.wxml-->
+<view style="position:relative;margin-top:20rpx">
+  <view style="background-color:#44c0c0;margin:0 20rpx;height:250rpx;display:flex">
+    <view style="text-align:center;flex:1">
+      <image src="{{avatarurl}}" mode="aspectFill" style="height:{{window_width/6}}px;width:{{window_width/6}}px;border-radius:100rpx ;margin-top:40rpx;border:6rpx solid white"></image>
+      
+    </view>
+    <view style="position:relative;flex:2">
+      <view style="margin-left:15rpx;margin-right:15rpx">
+
+        <view style="margin-top:70rpx;padding-bottom:0;">
+          <view style="text-align:left;">
+            <text style="color:white;font-size:25rpx">已登录<text style="font-size:50rpx">{{logindays}}</text>天 </text>
+          </view>
+<view style="position:absolute;bottom:38rpx"> <text style="color:white;font-size:25rpx">累计燃脂：<text style="font-size:50rpx">{{calorie}}</text> cal</text>
+    </view>
+        </view>
+        <!-- <view style="margin-top:10rpx">
+            <view style="margin-bottom:12rpx;display:flex;border-bottom:1px solid white;padding-bottom:0">
+              <view style="flex:1;text-align:left">
+                <text style="color:white;font-size:25rpx">食物热量：{{foodcalorie}} cal</text>
+              </view>
+              <view>
+                <image src="../../image/image/bacha.png" style="width:20rpx;height:20rpx;text-align:center" bindtap="clearfood">
+                </image>
+              </view>
+            </view>
+          </view> -->
+      </view>
+    </view>
+
+  </view>
+  
+  <view style="width:80rpx;height:40rpx;text-align:center;font-size:25rpx;border:1px solid white;position:absolute;bottom:42rpx;right:50px;color:white;border-radius:20rpx;line-height:40rpx" bindtap="clear">
+    清空
+  </view>
+</view>
+
+<view style="text-align:center;width:100%;margin-top:10rpx">
+<view bindtap="gotomine" data-type="kecheng" style="height:100rpx;border-bottom:1px solid #efefef;margin-left:20rpx"><image src="https://www.hxjiachen.com/wximage/subscription.png" style="width:70rpx;height:70rpx;float:left;margin-top:15rpx" mode="aspectFit"></image><text style="float:left;margin-top:30rpx;margin-left:30rpx;font-size:30rpx">我的订阅</text></view>
+<view bindtap="gotomyphoto" data-type="licehng" style="height:100rpx;border-bottom:1px solid #efefef;margin-left:20rpx"><image src="https://www.hxjiachen.com/wximage/course.png" style="width:70rpx;height:70rpx;float:left;margin-top:15rpx" mode="aspectFit"></image><text style="float:left;margin-top:30rpx;margin-left:30rpx;font-size:30rpx">我的历程</text></view>
+<view bindtap="gotoranking" style="height:100rpx;border-bottom:1px solid #efefef;margin-left:20rpx"><image src="https://www.hxjiachen.com/wximage/ranking.png" style="width:70rpx;height:70rpx;float:left;margin-top:15rpx" mode="aspectFit"></image><text style="float:left;margin-top:30rpx;margin-left:30rpx;font-size:30rpx">燃脂排名</text></view>
+<view bindtap="gotocart" style="height:100rpx;border-bottom:1px solid #efefef;margin-left:20rpx"><image src="https://www.hxjiachen.com/wximage/shopping_cart.png" style="width:70rpx;height:70rpx;float:left;margin-top:15rpx" mode="aspectFit"></image><text style="float:left;margin-top:30rpx;margin-left:30rpx;font-size:30rpx">购物车</text></view>
+<view bindtap="gotomyorder" style="height:100rpx;border-bottom:1px solid #efefef;margin-left:20rpx"><image src="https://www.hxjiachen.com/wximage/order_list.png" style="width:70rpx;height:70rpx;float:left;margin-top:15rpx" mode="aspectFit"></image><text style="float:left;margin-top:30rpx;margin-left:30rpx;font-size:30rpx">我的订单</text></view>
+</view>
+
+<!-- <view style="text-align:center;width:100%;margin-top:100rpx">
+  <button bindtap="gotomine" data-type="kecheng" style="margin-top:50rpx;margin-bottom:50rpx">我的订阅</button>
+  <button bindtap="gotomyphoto" data-type="licehng" style="margin-top:50rpx;margin-bottom:50rpx">我的历程</button>
+  <button bindtap="gotoranking" style="margin-top:50rpx;margin-bottom:50rpx">我的排名</button>
+  <button bindtap="gotocart" style="margin-top:50rpx;margin-bottom:50rpx">购物车</button>
+  <button bindtap="gotomyorder" style="margin-top:50rpx;margin-bottom:50rpx">我的订单</button>
+</view> -->

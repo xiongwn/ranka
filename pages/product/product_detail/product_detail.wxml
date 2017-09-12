@@ -1,0 +1,126 @@
+<view class="all">
+  <swiper class="swiper" indicator-dots="{{dots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+    <swiper-item class="swiper_item">
+      <image src="{{img}}" class="swiper_image" mode="aspectFill" style="width:100%"></image>
+    </swiper-item>
+  </swiper>
+  <view class="name">{{name}}</view>
+
+  <text style="margin:10rpx 30rpx;color:green">¥{{price}}</text>
+
+
+  <!--<view class="goods_character">
+    <ur>
+      <span>优良弹力，HOLD住任意变形</span> 
+      <span>时尚收腰，勾勒完美曲线</span> 
+    </ur>
+  </view>-->
+  <view style="display:flex;color:gray;font-size:25rpx;justify-content:space-between;text-align:center">
+    <view style="flex:1">快递：免运费</view>
+    <view class="showsalenum" style="flex:1">
+      <view class="sale">销量：<text class="salenum">{{num}}</text></view>
+
+    </view>
+    <view style="flex:1">浙江 杭州</view>
+  </view>
+</view>
+<view class="notice">
+  <view class="free_post">
+    <icon class="suc_icon" type="success" size="15" color="green" />
+    <text class="post_text"> 包邮</text>
+  </view>
+  <view class="return">
+    <icon class="suc_icon" type="success" size="15" color="green" />
+    <text class="return_text"> 七天无理由退货</text>
+  </view>
+  <view class="promiss">
+    <icon class="suc_icon" type="success" size="15" color="green" />
+    <text class="promiss_text"> 正品行货</text>
+  </view>
+</view>
+
+<!--*底部弹窗选择商品属性*-->
+<view class="product_attribute">
+  <view class="drawer_screen" bindtap="setModalStatus" data-status="0" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="{{goods_type=='cloth'?'drawer_attr_box1':'drawer_attr_box2'}}" wx:if="{{showModalStatus}}">
+    <view class="close_icon" bindtap="setModalStatus" data-status="0">
+      <icon type="cancel" size="30" color="#ccc"></icon>
+    </view>
+    <view class="drawer_attr_content">
+      <view class="image_container">
+        <image class="drawer_image" src="{{img}}"></image>
+        <text class="drawer_price">¥<text class="font_space">{{price}}</text>
+        </text>
+      </view>
+      <view class="size_color" wx:if="{{goods_type=='cloth'}}">
+        <view class="drawer_color">
+          <view class="drawer_title">颜色</view>
+          <view class="control_item">
+            <block class="drawer_item" wx:for="{{colorItems}}">
+              <button class="{{item.ischoose?'selected1':'selected2'}}" data-color="{{item.color}}" data-id="{{item.id}}" bindtap="set_button_color" style="float:left;width:20%">{{item.color}}</button>
+            </block>
+          </view>
+        </view>
+        <view class="drawer_size">
+          <view class="drawer_title">尺码</view>
+          <view class="control_item">
+            <block class="drawer_item" wx:for="{{sizeItems}}">
+              <button class="{{item.ischoose?'selected1':'selected2'}}" data-size="{{item.size}}" data-id="{{item.id}}" bindtap="set_button_size" style="float:left;width:20%">{{item.size}}</button>
+            </block>
+          </view>
+        </view>
+      </view>
+
+      <view class="{{goods_type=='cloth'?'drawer_number1':'drawer_number2'}}">
+        <view class="drawer_number_font">数量</view>
+        <view class="number_content">
+
+          <!-- 减号 -->
+          <view class="minus_item" bindtap="bindMinus">
+            <image class="minus" src="../../../image/image/countMinus.png"></image>
+          </view>
+
+          <!-- 数值 -->
+          <view class="input_value">
+            <input class="num" type="number" bindchange="bindManual" value="{{num}}"></input>
+          </view>
+          <view class="plus_item" bindtap="bindPlus">
+            <image class="plus" src="../../../image/image/countPlus.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button class="confirm_button" bindtap="confirm_selected">确定</button>
+  </view>
+  <block wx:if="{{choosen}}">
+    <view class="open_btn" bindtap="setModalStatus" data-status="1" style="margin-left:30rpx">已选择：
+      <text wx:if="{{goods_type=='cloth'}}">{{showItems.color}} {{showItems.size}} </text>
+      <text wx:else> {{showItems.num}}件</text>
+    </view>
+  </block>
+  <block wx:else="">
+    <view bindtap="setModalStatus" data-status="1" style="font-family:微软雅黑;margin-left:30rpx;margin-right:30rpx;margin-bottom:20rpx;height:60rpx;margin-top:20rpx;border:1px solid #efefef;border-radius:20px;text-align:center;line-height:60rpx">请选择 商品尺码</view>
+  </block>
+</view>
+<view class="space"></view>
+<view class="subtitle">
+  <text>商品介绍</text>
+</view>
+<view class="product_show">
+  <image class="show_img" src="{{img}}" mode="widthFix"></image>
+  <block wx:for="{{imgarr}}">
+    <image class="show_img" src="{{item}}" mode="widthFix"></image>
+  </block>
+
+
+</view>
+<view class="bottom">
+  <view class="cart_image" bindtap="mycart">
+    <image class="cart_icon" src="../../../image/image/cart.png"></image>
+    <view class="cart_total_num" hidden="{{hidden_cart_number}}">{{cartNum}}</view>
+  </view>
+  <view class="buy">
+    <button class="btn_buy" style="float:left;width:48%" bindtap="tobuy">立即购买</button>
+    <button class="btn_cart" style="float:right;width:48%" bindtap="tocart">加入购物车</button>
+  </view>
+</view>

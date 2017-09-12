@@ -1,0 +1,21 @@
+<view style="text-align:center;width:100%;height:270rpx;position:relative" >
+
+<image src="{{courseimg}}" style="height:inherit;width:inherit;position:relative" mode="aspectFill"></image>
+<view>
+<text style="color:white;font-size:50rpx;text-shadow: 0rpx 0rpx 10rpx #585858;position:absolute;top:85rpx;left:50rpx"> {{coursename}}</text></view>
+<view bindtap="subscribe" data-subscribe="{{subscirbe}}" data-id="{{courseid}}" style="position:absolute;bottom:0;background:-webkit-linear-gradient(top,#000000,transparent);background:linear-gradient(top,#ffffff,#48c23d);right:15rpx;border-radius:10rpx;padding-right:15rpx;padding-left:15rpx;padding-bottom:6rpx"><text style="color:white;text-shadow:0 0 5rpx black" data-id="{{courseid}}" data-subscribe="{{subscirbe}}">{{subscribe}}</text></view>
+</view>
+<view>
+<block wx:for="{{course}}">
+<view bindtap="play"  data-videourl="{{item.vediourl}}" data-name="{{item.title}}" data-index="{{index}}" data-calorie="{{item.calorie}}" style="overflow:hidden;position:relative width:100%;height:200rpx;background-color:transparent; margin:20rpx">
+<image  data-videourl="{{item.vediourl}}" data-name="{{item.title}}" data-index="{{index}}" data-calorie="{{item.calorie}}" src="{{item.imgurl}}" style="height:inherit;width:200rpx" mode="aspectFill"></image>
+<text style="left:30rpx;bottom:127rpx;position:relative">{{item.title }}</text>
+<view></view>
+<text class="cal" style="position:relative;">{{item.calorie}}卡路里</text>
+</view>
+</block>
+</view>
+
+
+
+

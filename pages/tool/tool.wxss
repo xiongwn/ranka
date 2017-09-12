@@ -1,0 +1,19 @@
+/* pages/tool/tool.wxss */
+/* button{
+margin:0 100rpx 130rpx 100rpx;
+background-color: #44c0c0;
+color:white;
+font-size:35rpx;
+} */
+.bq{
+  margin:60px 0;
+  
+}
+.bq text{
+   border-bottom:2px solid #44c0c0;
+   padding:10px 0;
+   
+}
+view{
+    font-family: 黑体
+}

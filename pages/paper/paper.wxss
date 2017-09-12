@@ -1,0 +1,12 @@
+/* pages/paper/paper.wxss */
+.con{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin-top:20rpx;
+}
+.img{
+    
+   width: 100%;
+  
+}

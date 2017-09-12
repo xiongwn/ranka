@@ -1,0 +1,25 @@
+<!--pages/play/play.wxml-->
+<view class="all" >
+<icon type="success" size="26" style="position:absolute;top:{{height-346}}px;right:12px;z-index:1200;color:green" bindtap="upload" class="{{icon}}"></icon>
+<icon type="clear" size="26" style="position:absolute;top:{{height-300}}px;right:12px;z-index:1200;" bindtap="clear" class="{{icon}}"></icon>
+<view class="play">
+  <video id="video" src="{{videourl}}" autoplay="{{false}}" controls="{{controls}}" bindpause="bindpause" bindplay="bindplay" bindended="bindended" style="width:100%;z-index:1"></video>
+  <view style="height:80rpx;"><text style="display:inline-block;vertical-align:middle;padding-top:15rpx" bindtap="change">视频无法播放？<text bindtap="change" style="color:#44c0c0">切换信道</text>试试</text></view>
+
+</view>
+<view style="text-align:center;margin-top:15rpx;font-family:'微软雅黑'">
+  <text>第{{index+1}}节 {{name}}</text>
+</view>
+<view style="width:100%;text-align:center">
+  <image src="{{src}}" style="margin-top:50rpx;padding-top:50rpx;align-items:center;width:200rpx;height:200rpx;border-radius:110rpx;" bindtap="EventHandle"></image>
+</view>
+
+<canvas canvas-id="photo" style="height:{{height}}px;width:100%" class='{{canvascss}}' id='{{canvas}}' /></view>
+<scroll-view scroll-x class="bg {{icon}}">
+
+  <image src="https://www.hxjiachen.com/poster_image/1.png" mode="aspectFit" style="height:100%;display:inline-block;width:25%" data-bg="0" bindtap="choose"></image>
+  <image src="https://www.hxjiachen.com/poster_image/2.png" mode="aspectFit" style="height:100%;display:inline-block;width:25%" data-bg="1" bindtap="choose"></image>
+  <image src="https://www.hxjiachen.com/poster_image/3.png" mode="aspectFit" style="height:100%;display:inline-block;width:25%" data-bg="2" bindtap="choose"></image>
+  <image src="https://www.hxjiachen.com/poster_image/4.png" mode="aspectFit" style="height:100%;display:inline-block;width:25%" data-bg="3" bindtap="choose"></image>
+
+</scroll-view>

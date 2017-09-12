@@ -1,0 +1,99 @@
+.my_wrap {
+  margin-top: 10rpx;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  height: 190rpx;
+  align-items: center;
+}
+
+.my_list {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.my_pic {
+  width: 110rpx;
+  height: 170rpx;
+  align-items: center;
+  margin-right: 10rpx;
+}
+
+.my_check {
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+}
+
+.my_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.my_title {
+  font-size: 36rpx;
+  font-family: "微软雅黑";
+}
+
+.my_txt {
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+}
+
+.my_num {
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+}
+
+.delete {
+  width: 30rpx;
+  height: 36rpx;
+  padding-left: 20rpx;
+}
+
+.bottom {
+  position: fixed;
+  border-top: 1px solid;
+  border-color: lightgrey;
+  display: flex;
+  height: 10%;
+  width: 100%;
+  z-index: 0;
+  bottom: 0rpx;
+  align-items: center;
+  background-color: white;
+  font-weight: 800;
+}
+
+
+.all_mycheck{
+    margin-right: 10rpx;
+    margin-left: 25rpx;
+}
+
+.mycount{
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.topay {
+  background: #44c0c0;
+  width: 28%;
+  height: 90rpx;
+
+  right: 20rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0;
+  color: white;
+  font-size: 30rpx;
+  line-height: 90rpx;
+  overflow: hidden;
+  float:right;
+}
+
+
+
+.item_price {
+  color: green;
+}

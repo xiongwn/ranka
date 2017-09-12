@@ -1,0 +1,417 @@
+.all {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.swiper{
+  border-width: 0 0 1px 0;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+  background-color: lightgray;
+}
+.swiper-item {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  height: 200px;
+  align-content: center;
+  align-items: center;
+}
+
+.swiper-image {
+  height: 200px;
+  display: block;
+  align-self: center;
+ 
+  margin-left: 2rpx;
+  margin-right: 2rpx;
+  text-align: center;
+}
+
+.swiper {
+  margin: 4px;
+  height: 200px;
+}
+
+
+.font_price{
+ 
+  font-weight: 900rpx;
+  font-size: 65rpx;
+  font-family: "Times New Roman";
+}
+.font_space{
+    padding-left: 5rpx;
+    font-weight: 100rpx;
+    font-size: 40rpx;
+  }
+
+.name {
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 300;
+  margin:0 30rpx;
+font-family: black;
+}
+
+
+.minus {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.plus {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.num {
+  width: 36px;
+  height: 18px;
+  line-height: 24px;
+  text-align: center;
+  display: flex;
+  left: 63px;
+}
+
+.choose_size {
+  display: flex;
+  margin-left: 25rpx;
+  padding-top: 20rpx;
+  width: 100%;
+}
+
+.size {
+  margin-top: 20rpx;
+  color: gray;
+}
+
+.choose_number {
+  margin-left: 25rpx;
+  display: flex;
+  padding-top: 30rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.number_content {
+  display: flex;
+  margin-top: 30rpx;
+  position: absolute;
+  right: 80rpx;
+}
+
+.number {
+  margin-top: 5rpx;
+  color: gray;
+}
+
+.tick_icon{
+  margin-top: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.post_text{
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+  color: gray;
+}
+.return_text{
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+  color: gray;
+}
+.promiss_text{
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+  color: gray;
+}
+.notice{
+  display: flex;
+  padding-left: 40rpx; 
+  padding-bottom: 5rpx;
+  background-color: #F8F8FF;
+  justify-content: space-between;
+  text-align: center;
+
+}
+.suc_icon{
+  margin-top: 15rpx;
+}
+.free_post{
+  margin-right: 60rpx;
+}
+.return{
+  margin-right: 60rpx;
+}
+.promiss{
+  margin-right: 60rpx;
+}
+.space{
+  height: 16rpx;
+  background-color: #F0F0F0;
+}
+
+.product_show {
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  text-align: center;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  margin-top: 25rpx;
+}
+
+.show_img {
+  max-height: 1000px;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  width:90%;
+}
+
+.selected_size {
+  padding-top: 20rpx;
+}
+
+.radio {
+  padding-right: 15rpx;
+}
+
+.bottom {
+  border: 1px solid;
+  border-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 130rpx;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+.cart_image{
+  width: 110rpx;
+  height: 90rpx;
+  position: absolute;
+  top:-4rpx;
+  left: 90rpx;
+  margin-top: 25rpx;
+
+}
+.cart_icon {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.btn_buy {
+  width: 100rpx;
+  height: 80rpx;
+  background-color: green;
+  color: white;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 90rpx;
+}
+
+.btn_cart {
+  width: 100rpx;
+  height: 80rpx;
+  background-color: gray;
+  color: white;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 90rpx;
+}
+
+.buy {
+  width: 60%;
+  position: absolute;
+  right: 20rpx;
+  top:25rpx;
+}
+
+.cart_total_num {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  font-size: 22rpx;
+  font-family: Fantasy;
+  color: white;
+  line-height: 36rpx;
+  background-color: red;
+  border-radius: 36rpx;
+  text-align: center;
+  position: absolute;
+  right: 2rpx;
+}
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.drawer_attr_box1 {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70%;
+  z-index: 2000;
+  background: #fff;
+}
+.drawer_attr_box2 {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+  z-index: 2000;
+  background: #fff;
+}
+.close_icon {
+  width: 25rpx;
+  height: 25rpx;
+  line-height: 20rpx;
+  font-size: 25rpx;
+  position: absolute;
+  right: 39rpx;
+  top:5rpx;
+  color: #ccc;
+  text-align: center;
+  background: #fff;
+}
+.image-container{
+    display: flex;
+    width: 100%;
+    height: 220rpx;
+    border: 1rpx solid gainsboro;
+    justify-content: space-between;
+}
+.drawer_image{  
+  
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 25rpx;
+  width: 150rpx;
+  height: 160rpx;
+  border: 1rpx solid;
+  border-color: #008B00
+}
+.drawer_price{
+  margin:50rpx;
+  position: absolute;
+  top: 20rpx;
+  font-weight: 800;
+  color: green
+  }
+
+.drawer_color{
+  width: 100%;
+  height: 220rpx;
+  border-top: 1rpx solid;
+  border-color: lightgrey;
+  
+}
+.drawer_size{
+  width: 100%;
+  height: 220rpx;
+  border-top: 1rpx solid;
+  border-bottom: 1rpx solid;
+  border-color: lightgrey;
+}
+
+
+.drawer_title{
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  font-size: 34rpx;
+}
+.drawer_number1{
+  display: flex;
+  width: 100%;
+  height: 210rpx;
+  border-bottom: 1rpx solid;
+  border-color: lightgrey;
+}
+.drawer_number2{
+  display: flex;
+  margin-top: 20rpx;
+  padding-top: 30rpx;
+  padding-bottom: 50rpx;
+  border-top: 1rpx solid lightgray;
+
+}
+.drawer_number_font{
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+  margin-right: 90rpx;
+  font-size: 34rpx;
+}
+.control_item{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  flex-wrap: wrap;
+}
+.drawer_item{
+  display: flex;
+  
+}
+.selected1{
+  box-sizing: border-box;
+  margin: 5px 5px;
+  height: 36px;
+  width: 150rpx;
+  background-color: #F75000;
+  color: white;
+  text-align: center;
+  vertical-align:middle;
+  line-height:22px;
+  padding-top: 10rpx;
+}
+.selected2{
+  box-sizing: border-box;
+  margin: 5px 5px;
+  height: 36px;
+  width: 150rpx;
+  color:#1aad19;
+  border:1px solid #1aad19;
+  background-color:transparent;
+  text-align: center;
+  vertical-align:middle ;
+  line-height:22px;
+  padding-top: 10rpx;
+}
+.confirm_button{
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: green;
+  color: white;
+  border-radius: 0rpx;
+  font-family: "微软雅黑";
+  font-weight: 500;
+}
+.open_btn{
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-family: "微软雅黑";
+  font-size: 40rpx;
+  
+}

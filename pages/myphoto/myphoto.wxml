@@ -1,0 +1,11 @@
+<!--pages/myphoto/myphoto.wxml-->
+<block wx:if="{{isempty}}">
+<view style="text-align:center;margin-top:400rpx;color:#aaaaaa"><view>您还没有运动记录</view><view>观看视频可以进行自拍记录</view></view>
+</block>
+<view style="display:flex;flex-wrap:wrap;justify-content:space-between;padding:50rpx">
+<block wx:for="{{imgurlarray}}">
+<view style="text-align:center;" ><image src="{{item.picurl}}" style="width:300rpx;height:400rpx;margin-top:20rpx;z-index:10;margin-bottom:20rpx" data-index="{{index}}" bindtap="preview" mode="aspectFit"></image><view bindtap="delete" data-id="{{item.id}} " data-index="{{index}}" data-openid="{{item.openid}}"> <image src="../../image/image/delete.png" style="width:30rpx;height:30rpx;position:relative" data-id="{{item.id}} " data-index="{{index}}" data-openid="{{item.openid}}"></image></view> </view>
+
+
+
+</block></view>

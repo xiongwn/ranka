@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/course/course",
+    "pages/mall/mall",
+    "pages/ranking/ranking",
+    "pages/paper/paper",
+    "pages/play/play",
+    "pages/person/person",
+    "pages/mine/mine",
+    "pages/tool/tool",
+    "pages/calculate/calculate",
+    "pages/product/product_detail/product_detail",
+    "pages/product/order/order",
+    "pages/address/address",
+    "pages/myphoto/myphoto",
+    "pages/cart/cart",
+    "pages/myorder/myorder",
+    "pages/text/text"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#44c0c0",
+    "navigationBarTitleText": "视频",
+    "navigationBarTextStyle": "wight"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#44c0c0",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "视频",
+        "iconPath": "image/image/video1.jpg",
+        "selectedIconPath": "image/image/video2.jpg"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "text": "工具",
+        "iconPath": "image/image/tool1.jpg",
+        "selectedIconPath": "image/image/tool2.jpg"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "image/image/mail1.jpg",
+        "selectedIconPath": "image/image/mail2.jpg"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "image/image/rank1.jpg",
+        "selectedIconPath": "image/image/rank2.jpg"
+      }
+    ]
+  }
+}

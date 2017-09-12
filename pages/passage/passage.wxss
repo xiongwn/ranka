@@ -1,0 +1,83 @@
+/* pages/passage/passage.wxss */
+.pl{
+    width:100%;
+    text-align: center;
+}
+.line{
+    height: 1px;
+    margin:0 auto;
+    background-color: #545454;
+    opacity: 0.3;
+    
+    width: 60%;
+    
+}
+.image-content{
+    margin: 50rpx 0 0 0;
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+text{
+    color: black;
+}
+.lesson-name{
+  color: white;
+  position: absolute;
+  height: 50rpx;
+  width:50%;
+  margin-left:5px;
+  font-size: 50rpx;
+  z-index: 12;
+  
+}
+.swiper{
+  margin:4px;
+  height: 200px;
+}
+.swiper-item
+{
+  background-color: transparent;
+  display: block;
+  width: 100%;
+ height: 200px;
+ align-content: center;
+ align-items: center
+}
+
+.slide-image
+{
+  height:200px;
+  display: block;
+  align-self: center;
+  width:100%;
+  margin-left: 2px;
+  margin-right: 2px;
+  z-index: 1
+}
+.item{
+    width:345rpx;
+    margin: 0 0 20rpx 0;
+    text-align: center;
+}
+image{
+    width: 100%;
+    height: 450rpx;
+}
+.scroll{
+   
+    
+    width: 100%;
+    height: 90rpx;
+    
+    white-space: nowrap;
+}
+.item-scroll{
+    display: inline-block;
+    padding: 0 20rpx;
+    line-height:90rpx;
+}
+.selected{
+    color: red;
+}

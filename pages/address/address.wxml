@@ -1,0 +1,17 @@
+<view >
+  <form bindsubmit="tosave">
+    <view class="name">
+      <text class="font">收件人 </text>
+      <input type="text" name="name" class="input" placeholder="收件人姓名" />
+    </view>
+    <view class="phone">
+      <text class="font">手机号</text>
+      <input type="text" name="phone" class="input" placeholder="请填写收件人手机号" />
+    </view>
+    <view class="address">
+      <text class="font">收货地址</text>
+      <input type="text" name="address" class="input" placeholder="请输入收货地址" />
+    </view>
+    <button form-type="submit" class="save" hover-class="navigator-hover">保存</button>
+  </form>
+</view>

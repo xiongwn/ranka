@@ -1,0 +1,36 @@
+
+<view wx:for="{{carts}}" wx:for-index="idx" class="carts-item" data-title="{{item.title}}" data-url="{{item.img}}" data-id="{{item.id}}" bindtap="bindViewTap">
+  <view class="my_wrap">
+    <view class="my_list">
+      <icon wx:if="{{item.selected}}" type="success_circle" size="20" bindtap="bindCheckbox" data-index="{{idx}}" class="my_check" />
+      <icon wx:else type="circle" size="20" bindtap="bindCheckbox" data-index="{{idx}}" class="my_check" />
+      <image src="{{item.img}}" class="my_pic" mode="aspectFill"></image>
+      <view class="my_left" style="width:60%">
+        <view class="my_title" style="font-size:25rpx;font-family:黑体">{{item.title}}</view>
+        <view class="my_txt" style="font-size:20rpx">颜色：{{item.hasSelected["color"]}}</view>
+        <view class="my_txt" style="font-size:20rpx">尺码：{{item.hasSelected["size"]}}</view>
+        <view class="my_bnt">
+        </view>
+      </view>
+      <view class="my_right">
+        <image src="../../image/image/delete.png" class="delete" data-index="{{idx}}" bindtap="delete_item"></image><view></view>
+        <text class="item_price" style="font-size:30rpx">¥{{item.price}}</text>
+        <view class="my_num">数量:{{item.hasSelected["num"]}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="bottom">
+    <view bindtap="bindSelectAll" class="all_selected">
+    <icon wx:if="{{selectedAllStatus}}" type="success_circle" size="20" class="all_mycheck" />
+    <icon wx:else type="circle" size="20" class="all_mycheck" />
+    
+  </view>
+  <text class="selected_font" style="font-size:30rpx;margin-right: 30rpx;">全选</text>
+  <view class="my_count" style="font-size:30rpx">
+    合计:
+    <text class="all_money" style="font-size:30rpx;color: green;;font-weight: 900">¥ {{count}}</text>
+  </view>
+  <button class="topay" bindtap="setPayment">结算({{cart_item_num}})</button>
+
+</view>

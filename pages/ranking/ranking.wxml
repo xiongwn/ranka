@@ -1,0 +1,14 @@
+<!--pages/ranking/ranking.wxml-->
+<view>
+<image src="{{userarray[0].imgurl}}" style="width:99%;height:200px;margin:5rpx" mode="aspectFill"></image>
+</view>
+<block wx:for='{{userarray}}' >
+<view style="margin:0rpx 30rpx;height:100rpx;left:float;position:relative">
+<view style='margin-top:30rpx'>
+{{index+1}}
+<image src="{{item.avaturl}}" style='margin-left:10rpx;width:80rpx;height:80rpx;border-radius:50rpx;vertical-align:middle'></image>
+<!--<block wx:if='{{item.nickname.length}}'></block>-->
+<text style='margin-left:20rpx;font-size:30rpx;margin-top:5rpx'>{{item.nickname}}</text><text style='position:absolute;top:16rpx;right:20rpx;font-size:30rpx;margin-top:5rpx'>{{item.current_calories}}大卡</text>
+</view></view>
+<view style="width:100%;height:1px;background-color:#f0f0f0"></view>
+</block>

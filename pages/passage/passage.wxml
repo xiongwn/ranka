@@ -1,0 +1,28 @@
+<swiper indicator-dots="{{indicator}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper">
+<block wx:for="{{recommend}}">
+    <swiper-item class="swiper-item">
+    <text class="lesson-name" >{{item.title}}</text>
+      <image src="{{item.imgurl}}" class="slide-image" mode="aspectFill" bindtap="gotorecommend" data-name="{{item.title}}"/>
+      
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-x="true" class="scroll" data-current="{{current}}">
+<block wx:for="{{allpassages}}" wx:key="">
+<block wx:if="{{current==item.index}}">
+<view class="item-scroll selected" bindtap="change" data-index="{{item.index}}">{{item.type}}</view>
+</block>
+<block wx:else><view class="item-scroll " bindtap="change" data-index="{{item.index}}">{{item.type}}</view></block>
+</block>
+</scroll-view>
+
+
+<view class="pl"><view class="line"></view></view>
+<view class="image-content">
+<block wx:for="{{passages}}" wx:key="">
+<view class="item">
+<image src="{{item.imgurl}}" mode="aspectFill" data-name="{{item.title}}" bindtap="goto"></image>
+<text>{{item.title}}</text>
+</view>
+</block>
+</view>

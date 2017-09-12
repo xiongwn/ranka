@@ -1,0 +1,28 @@
+<view style="width:100%;height:15rpx;background-color:#cccccc"></view>
+<scroll-view scroll-x="true" class="scroll" data-current="{{current}}">
+  <block wx:for="{{alltitlebars}}" wx:key="">
+    <block wx:if="{{current==item.index}}">
+      <view class="item-scroll selected" bindtap="click" data-index="{{item.index}}" style="font-family:黑体;width:{{width/4}}px"><text bindtap="click" data-index="{{item.index}}">{{item.name}}</text></view>
+    </block>
+    <block wx:else>
+      <view class="item-scroll " bindtap="click" data-index="{{item.index}}" style="font-family:黑体;width:{{width/4}}px"><text bindtap="click" data-index="{{item.index}}">{{item.name}}</text></view>
+    </block>
+  </block>
+</scroll-view>
+<view style="width:100%;height:1px;background-color:#cccccc;margin-top:-20rpx"></view>
+<view class="image-content">
+  <block wx:for="{{goods}}" wx:key="">
+    <view class="item">
+      <image src="{{item.imgurl}}" mode="aspectFill" data-id="{{item.id}}" data-name="{{item.title}}" data-price="{{item.price}}" data-img="{{item.imgurl}}" data-imgarr="{{item.imgurlList}}" data-goodstype="{{item.goodsType}}" bindtap="jump"></image>
+      <text style="font-size:22rpx;color:black">{{item.title}}</text>
+      <view class="price">¥
+        <text>{{item.price}}.00</text>
+      </view>
+      
+    </view>
+  </block>
+</view>
+<view class="cart_image" bindtap="tocart" >
+  <image class="cart_icon " src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=1416876472,2670247656&fm=85&s=1B843C62AD8050C84EFD5CC60000E0B1" style="z-index:5" mode="aspectFill"></image>
+  <view class="cart_total_num " hidden="{{hidden_cart_number}}">{{cartNum}}</view>
+</view>

@@ -1,0 +1,141 @@
+
+<!--pages/calculate/calculate.wxml-->
+<block wx:if="{{type=='BMI'}}">
+  <view style="width:100%">
+  <block wx:if="{{BMI_hidden=='show'}}">
+  <view>
+
+    <picker style="height:100rpx;padding-top:10rpx;border:1px solid #ccc;margin:20px;padding-left:10px" bindchange="changeheight" value="{{heightindex}}" mode="selector" range="{{heightarray}}">
+      <view style="font-size:90%;line-height:150%;margin-top:20rpx">{{height}}</view>
+    </picker>
+  
+    <picker style="height:100rpx;margin-top:10rpx;border:1px solid #ccc;margin:20px;padding-left:10px" bindchange="changeweight" value="{{weightindex}}" mode="selector" range="{{weightarray}}">
+      <view style="font-size:90%;line-height:150%;margin-top:20rpx">{{weight}}</view>
+    </picker>
+    
+    <picker style="height:100rpx;margin-top:10rpx;border:1px solid #ccc;margin:20px;padding-left:10px" bindchange="changeage" value="{{ageindex}}" mode="selector" range="{{agearray}}">
+      <view style="font-size:90%;line-height:150%;margin-top:20rpx">{{age}}</view>
+    </picker>
+    
+    <picker style="height:100rpx;margin-top:10rpx;border:1px solid #ccc;margin:20px;padding-left:10px" bindchange="changesex" value="{{sexindex}}" mode="selector" range="{{sexarray}}">
+      <view style="font-size:90%;line-height:150%;margin-top:20rpx">{{sex}}</view>
+    </picker>
+    
+    <button bindtap="caculate" style="margin-top:25px;border-radius:10rpx;background-color:#44c0c0;color:white;width:50%">开始检测</button>
+
+    <view style="text-align:center;position:relative;margin-top:5%">
+    
+    <text wx:if="{{BMI!=0}}" style="font-size:40rpx;font-family:微软雅黑;color:#44c0c0">{{BMI}}</text>
+    
+    </view>
+    <view style="width:100%;text-align:center;position:fixed;bottom:-5%;" >
+    <view style="width:80%;margin-left:10%">
+    <image src="https://www.hxjiachen.com/wximage/bmi.jpg" mode="aspectFit" style="width:100%"></image>
+    </view>
+    </view>
+  </view>
+  </block>
+  <block wx:if="{{BMI_hidden=='hidden'}}">
+  <view style="text-align:center;position:relative;margin-top:40rpx">
+  <view style="border:1px solid #888888;padding:40rpx;margin:0 5%">
+  <view style="margin-bottom:40rpx;"><text wx:if="{{BMI!=0}}"  style="font-size:40rpx;color:#44c0c0;">您的BMI指数为</text></view>
+  
+    <text wx:if="{{BMI!=0}}" style="font-size:80rpx;font-family:微软雅黑;color:#595959;">{{BMI}}</text>
+    </view>
+    <block wx:if="{{sex=='女'}}">
+    <image src="https://hxjiachen.com/wximage/bmi_women.jpg" mode="widthFix" style="margin-top:80rpx;width:90%" ></image>
+    </block>
+    <block wx:elif="{{sex=='男'}}">
+    <image src="https://hxjiachen.com/wximage/bmi_men.jpg" mode="widthFix" style="margin-top:80rpx;width:90%"></image>
+    </block>
+    </view>
+    </block>
+    
+    
+  </view>
+</block>
+<block wx:elif="{{type=='sport'}}">
+  <view class="{{sporthidden}}" style='z-index:0'>
+    <view style="width:100%;height:80rpx;display:flex;padding-top:20rpx;position:fixed;background-color:white;z-index:12">
+      <view style="flex:1;text-align:center;font-size:30rpx;font-family:黑体" data-index="0" class="{{index_0}}" bindtap="changesport">运动</view>
+      <view style="flex:1;text-align:center;font-size:30rpx;font-family:黑体" data-index="1" class="{{index_1}}" bindtap="changesport">日常活动</view>
+    </view>
+    <view style="width:100%;height:1rpx;background-color:gray;opacity:0.5;"></view>
+    <view style="margin-top:100rpx">
+      <block wx:for="{{incidentarray}}">
+        <view class="{{sportshow}}" style="width:100%;height:100rpx;padding-left:50rpx;" data-sport="{{item.sport}}" data-calorie="{{item.calorie}}" bindtap="addanimation">
+          <view style="font-size:30rpx;margin-top:20rpx" data-sport="{{item.sport}}" data-calorie="{{item.calorie}}">{{item.sport}}</view>
+          <view style="font-size:24rpx;color:red" data-sport="{{item.sport}}" data-calorie="{{item.calorie}}">{{item.calorie}}
+            <text style="color:gray">千卡/60分钟</text>
+          </view>
+        </view>
+        <view style="width:100%;height:1px;background-color:gray;opacity:0.5;z-index:1"></view>
+      </block>
+    </view>
+    <view style="height:300rpx"></view>
+    <view style="position:fixed;width:100%;height:25%;bottom:0;z-index:1;border-top:1px solid #44c0c0;background-color:white;text-align:center">
+      <view style="margin-top:10rpx;font-size:30rpx;color:#808080;font-family:黑体">您所添加的自主运动卡路里消耗在个人页面也能查看</view>
+      <view style="color:#111111;font-size:35rpx;margin-top:10rpx;font-family:黑体">所选运动共消耗:</view>
+      <view style="font-size:60rpx;color:#44c0c0;margin-top:30rpx">{{calorie}}cal</view>
+    </view>
+  </view>
+  <view style="width:100%;height:200px;position:fixed;bottom:-50%;background-color:white;z-index:10" class="{{addcontrol}}">
+    <view style="position:absolue">
+
+      <!--<view style="position:fixed;pointer-events:none;z-index:2;height:{{windowHeight}}px;width:{{windowWidth}}px;top:0"></view>-->
+      <view style="padding-left:100rpx;width:100%;margin-top:5px;height:20px">{{choicedsport}}</view>
+      <view style="padding-left:100rpx;width:100%;margin-top:5px;font-size:10px;color:gray;height:25px">
+        <text style="color:gray;height:inherit;font-size:15px">
+          <text style="color:#ed1e79">{{choicedcalorie}}</text>千卡/60分钟</text>
+      </view>
+      <view style="width:100%;height:1px;background-color:gray"></view>
+      <view style="width:5rpx;height:30px;background-color:red;position:absolute;left:50%;top:86px;z-index:4"></view>
+      <view style="height:15px;margin-top:5px;margin-bottom:10px;font-size:15px;margin-left:100rpx;color:#808080">
+        {{minute}}分钟</view>
+      <scroll-view scroll-x="true" style="height:60px;position:fixed;" bindscroll="bindscroll">
+        <canvas class="{{iscancel}}" canvas-id="ruler" style="height:60px;width:2050px;background-color:#F7F7F7;position:absolute;" />
+      </scroll-view>
+      <view style="position:absolute;bottom:0;width:100%;display:flex;height:40px">
+        <view style="background-color:#44c0c0;text-align:center;flex:1;" calss="{{are_you_sure}}" bindtap="addsport">
+          <view style="margin-top:6px;color:white;font-family:微软雅黑">确定</view>
+        </view>
+        <view style="background-color:#cccccc;text-align:center;flex:1;" calss="{{iscancel}}" bindtap="cancel">
+          <view style="margin-top:6px;color:white;font-family:微软雅黑">取消</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:elif="{{type=='food'}}">
+  <view style="text-align:center;width:100%;margin-top:20rpx;margin-bottom:20rpx">
+    <view style="font-family:黑体;font-size:40rpx">添加饮食</view>
+  </view>
+  <view style="margin:0 15px 35px 0;border-radius:30px;position:relative">
+    <image bindtap="searchbind" class="{{img_hidden}}" src="../../image/image/search.png" style="height:20px;width:20px;position:absolute;left:30px;top:8px;z-index:5"></image>
+    <input focus="{{focus}}" bindfocus="bindfocus" bindblur="bindblur" placeholder="请输入食材名称" placeholder-style="padding-left:35px;color:white;background-color:#44c0c0;font-family: 黑体" bindinput="inputchange" style="margin-left:20px;height:35px;border-radius:25px;background-color:#44c0c0;color:white;padding-left:35px;font-family: 黑体"
+    />
+  </view>
+  <view style="margin-left:40rpx;color:#cccccc;font-family:黑体">如：黄瓜、茄子、秋葵</view>
+  <view style="width:100%;height:2rpx;background-color:gray;opacity:0.5;z-index:1"></view>
+  <block wx:for="{{findfoodarray}}">
+    <view style="display:flex;padding-left:60rpx;height:80rpx;margin:10px 0">
+      <image src="https://www.hxjiachen.com/vegetables/{{item.id}}.jpg" style="height:80rpx;width:80rpx;border-radius:8rpx;margin-right:20rpx"></image>
+      <view style="flex:1">
+        <view style="font-size:40rpx;font-family:黑体">{{item.food}}(克)</view>
+        <view style="color:red;font-size:30rpx;">{{item.calorie}}
+          <text style="font-family:微软雅黑;color:#cccccc">千卡/100克</text>
+        </view>
+      </view>
+      <picker style="color:#44c0c0;height:100%;margin-right:10rpx;margin-top:20rpx" mode="selector" range="{{foodrange}}" value="0" data-choosenfood="{{item.food}}" bindchange="addfood" data-weight="{{foodrange[foodindex]}}" data-calorie="{{item.calorie}}">添加</picker>
+
+      <!--<image src="../../image/image/add.png" style="float:right;height:20px;width:20px;padding-right:10px" data-choosenfood="{{item.food}}" data-calorie="{{item.calorie}}" data-weight="{{foodrange[foodindex]}}" bindtap="addfood"></image>-->
+    </view>
+    <view style="margin-left:140rpx;height:1px;background-color:gray;opacity:0.5;z-index:1"></view>
+  </block>
+  <view style="height:300rpx"></view>
+  <view style="position:fixed;width:100%;height:25%;bottom:0;z-index:1;border-top:1px solid #44c0c0;background-color:white;text-align:center">
+    <!-- <view style="margin-top:10rpx;font-size:30rpx;color:#808080;font-family:黑体">您所添加的食物摄入卡路里在个人页面也能查看</view> -->
+    <view style="color:#111111;font-size:40rpx;margin-top:10rpx;font-family:黑体">所选食物共有:</view>
+    <view style="font-size:80rpx;color:#44c0c0;margin-top:30rpx">{{food_calorie}}cal</view>
+  </view>
+</block>

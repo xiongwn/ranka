@@ -1,0 +1,86 @@
+/* myorder.wxss */
+.orderItem{
+  display: flex;
+  flex-direction: column;
+}
+.space{
+  border-bottom: 25rpx solid gainsboro;
+}
+.ordertitle{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  
+}
+.ordernum{
+  margin-left: 10rpx;
+  font-size: 25rpx;
+}
+
+.orderinfo{
+  display: flex;
+  border-bottom: 2rpx solid gainsboro;
+  border-top: 2rpx solid gainsboro;
+  padding-bottom: 15rpx;
+
+}
+.img {
+  width: 200rpx;
+  height: 140rpx;
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+}
+.goods_title {
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.order_num{
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  font-size: 30rpx;
+  color: gray;
+}
+.orderstate{
+  font-size:25rpx;
+}
+.orderprice{
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  padding-bottom: 15rpx;
+  justify-content: space-between;
+}
+.money{
+  font-size: 40rpx;
+  margin-top: 5rpx;
+  font-size: 33rpx;
+  padding-top:5px;
+}
+.buy_again{
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 10rpx;
+  background-color: white;
+  border:1px solid red;
+  border-radius: 15rpx;
+  border-color:red;
+  color: red;
+  font-size: 29rpx;
+}
+.delete {
+  width: 32rpx;
+  height: 36rpx;
+  position: absolute;
+  right:45rpx;
+}
+.right_info{
+  display: flex;
+  flex-direction: column;
+}
